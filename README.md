@@ -105,4 +105,5 @@ GANSpace: https://github.com/harskish/ganspace
 Some of the dependencies fall under the [Nvidia Source Code License](https://github.com/NVlabs/stylegan3/blob/main/LICENSE.txt).
 
 ## Project status
-This code base is still open to changes and bugs might still appear. Please create issues and let us know so we can polish for the final release!
+This code base is still open to changes and bugs might still appear. Please create issues and let us know so we can polish it for the final release! \
+As a dedicated research team behind Autolume, we emphasize that our system is a tool for exploration and innovation without direct support.
