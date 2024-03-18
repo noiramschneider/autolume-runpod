@@ -86,6 +86,15 @@ Artworks: \
     https://www.metacreation.net/projects/dreamscape/ \
     https://metacreation.net/autolume-acedia/ 
 
+## Credits
+Philippe Pasquier: Director of Metacreation Lab for Creative AI \
+Arshia Sobhan: Project management \
+Jonas Kraasch: Project initiation and first-phase development \
+Arthur Deleu: Project development \
+Mahshid Jabari: DevOps \
+Peter Chen: Contributions to the super-resolution module \
+Manuel Bolduc: User testing
+
 ## Acknowledgment
 PyTorch StyleGAN2-ada: https://github.com/NVlabs/stylegan2-ada-pytorch \
 Underlying GUI code: https://github.com/NVlabs/stylegan3 \
