@@ -81,8 +81,9 @@ Showcase of current state: https://www.dropbox.com/s/e8yfdtdw3x3s7h0/autolume.mp
 Trial runs:\
     https://www.instagram.com/p/ChsrxkCjJNu/ \
     https://www.instagram.com/p/Cg5aMrqjgIM/ \
-Installations: \
+Artworks: \
     https://metacreation.net/autolume-mzton/ \
+    https://www.metacreation.net/projects/dreamscape/ \
     https://metacreation.net/autolume-acedia/ 
 
 ## Acknowledgment
