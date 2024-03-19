@@ -4,6 +4,8 @@ Autolume-Live is a tool for real-time visual performances using StyleGAN2.
 
 For detailed documentation and demos look at the [Metacreation Lab Website](https://www.metacreation.net/autolume).
 
+![Add Python to PATH](images/python-install.png)
+
 ## Getting started
 ### Ubuntu Autolume Installer Guide
 To successfully run this program, your system must have a 64-bit Linux operating system, and you must download and install the following prerequisites:
