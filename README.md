@@ -104,7 +104,7 @@ GAN compression: https://github.com/lychenyoko/content-aware-gan-compression \
 GANSpace: https://github.com/harskish/ganspace
 
 ## License
-Some of the dependencies fall under the [Nvidia Source Code License](https://github.com/NVlabs/stylegan3/blob/main/LICENSE.txt).
+Some of the dependencies fall under the [Nvidia Source Code License](https://github.com/NVlabs/stylegan2-ada-pytorch/blob/main/LICENSE.txt).
 
 ## Project status
 This code base is still open to changes and bugs might still appear. Please create issues and let us know so we can polish it for the final release! \
