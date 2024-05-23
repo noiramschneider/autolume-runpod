@@ -76,7 +76,7 @@ if (-not $SkipClone)
     else
     {
         $env:GIT_REDIRECT_STDERR = '2>&1'
-        & git reset --hard origin/windows-installer
+        & git reset --hard origin/main
 
         if (-not $?)
         {
