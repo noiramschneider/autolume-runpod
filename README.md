@@ -89,13 +89,14 @@ Artworks: \
     https://metacreation.net/autolume-acedia/ 
 
 ## Credits
-Philippe Pasquier: Director of Metacreation Lab for Creative AI \
+Philippe Pasquier: Director of Metacreation Lab for Creative AI, Principal Investigator \
 Arshia Sobhan: Project management \
-Jonas Kraasch: Project initiation and first-phase development \
+Jonas Kraasch: Project first-phase development \
 Arthur Deleu: Project development \
 Mahshid Jabari: DevOps \
 Peter Chen: Contributions to the super-resolution module \
-Manuel Bolduc: User testing
+Manuel Bolduc: User testing \
+Ahmed Abuzuraiq: Research associate
 
 ## Acknowledgment
 PyTorch StyleGAN2-ada: https://github.com/NVlabs/stylegan2-ada-pytorch \
