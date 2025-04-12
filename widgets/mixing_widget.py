@@ -108,7 +108,8 @@ class MixingWidget:
                         self.model_pth = resolve_pkl(pkl)
                         model_changed = True
                 if self.browse_refocus:
-                    imgui.set_scroll_here()
+                    imgui.set_scroll_here_y()
+
                     self.browse_refocus = False
 
                 imgui.end_popup()

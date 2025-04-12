@@ -136,7 +136,7 @@ class MixingModule:
                 if clicked:
                     self.load_pkl(pkl, m, ignore_errors=True)
             if self.browse_refocus:
-                imgui.set_scroll_here()
+               # imgui.set_scroll_here()
                 self.browse_refocus = False
 
             imgui.end_popup()

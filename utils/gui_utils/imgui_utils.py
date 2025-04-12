@@ -133,7 +133,11 @@ def scoped_by_object_id(method):
     def decorator(self, *args, **kwargs):
         imgui.push_id(str(id(self)))
         res = method(self, *args, **kwargs)
-        imgui.pop_id()
+        try:
+            imgui.pop_id()
+        except Exception as e:
+            print("pop_id a échoué:", e)
+
         return res
 
     return decorator
@@ -249,7 +253,7 @@ def drag_float_slider(label, value, min_value, max_value, format):
 
     # if using slider and moving mouse outside the slider area, the value will continue to increase/decrease
 
-    if imgui.is_item_active() and imgui.is_mouse_dragging():
+    if imgui.is_item_active() and imgui.is_mouse_dragging(0):
         changed = True
         # calculate the delta between the mouse position and the slider position if mouse on the right side of the slider calculate in regards to the max value
         if imgui.get_mouse_pos()[0] > imgui.get_item_rect_max()[0]:

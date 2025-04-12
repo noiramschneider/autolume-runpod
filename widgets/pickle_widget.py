@@ -159,7 +159,7 @@ class PickleWidget:
                     self.load_pkl(pkl, ignore_errors=True)
 
             if self.browse_refocus:
-                imgui.set_scroll_here()
+                imgui.set_scroll_here_y()
                 viz.app.skip_frame()  # Focus will change on next frame.
                 self.browse_refocus = False
 

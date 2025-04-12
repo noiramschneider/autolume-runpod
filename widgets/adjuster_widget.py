@@ -153,7 +153,7 @@ class AdjusterWidget:
                                                                               help_text="mapping")
                 changed, self.weights[i] = imgui.v_slider_float(f"##slider{i}", self.viz.app.button_w,
                                                                 self.viz.app.content_height / 10, self.weights[i], -5, 5,
-                                                                format='%.3f', power=3)
+                                                                format='%.3f')
                 changed, self.paths[i] = imgui_utils.input_text(f"##vec_path{i}", self.paths[i], 256,
                                                                 imgui.INPUT_TEXT_CHARS_NO_BLANK,
                                                                 width=self.viz.app.button_w, help_text="filepath")

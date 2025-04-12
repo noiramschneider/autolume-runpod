@@ -32,7 +32,7 @@ from widgets import collapsable_layer
 from pythonosc.osc_server import BlockingOSCUDPServer
 from pythonosc.dispatcher import Dispatcher
 from pythonosc.udp_client import SimpleUDPClient
-import NDIlib as ndi
+#import NDIlib as ndi
 
 #----------------------------------------------------------------------------
 
@@ -63,11 +63,11 @@ class Visualizer:
         self.server_thread.start()
 
         # NDI parameters
-        self.ndi_name = 'Autolume Live'
-        send_settings = ndi.SendCreate()
-        send_settings.ndi_name = self.ndi_name
-        self.ndi_send = ndi.send_create(send_settings)
-        self.video_frame = ndi.VideoFrameV2()
+        #self.ndi_name = 'Autolume Live'
+        #send_settings = ndi.SendCreate()
+        #send_settings.ndi_name = self.ndi_name
+        #self.ndi_send = ndi.send_create(send_settings)
+        #self.video_frame = ndi.VideoFrameV2()
 
         # Internals.
 
@@ -224,9 +224,9 @@ class Visualizer:
             if self._tex_img is not self.result.image:
                 self._tex_img = self.result.image
                 img = cv2.cvtColor(self._tex_img, cv2.COLOR_RGB2BGRA)
-                self.video_frame.data = img
-                self.video_frame.FourCC = ndi.FOURCC_VIDEO_TYPE_BGRX
-                ndi.send_send_video_v2(self.ndi_send, self.video_frame)
+                #self.video_frame.data = img
+                #self.video_frame.FourCC = ndi.FOURCC_VIDEO_TYPE_BGRX
+                #ndi.send_send_video_v2(self.ndi_send, self.video_frame)
                 if self._tex_obj is None or not self._tex_obj.is_compatible(image=self._tex_img):
                     self._tex_obj = gl_utils.Texture(image=self._tex_img, bilinear=False, mipmap=False)
                 else:
@@ -244,6 +244,12 @@ class Visualizer:
 
         # End frame.
         imgui.end()
+       # opened, _ = imgui.begin("Live view", closable=False)
+       # if opened:
+       #     try:
+       #         pass  # tu peux ajouter des éléments ici si besoin
+       #     finally:
+       #         imgui.end()
 
 #----------------------------------------------------------------------------
 

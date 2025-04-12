@@ -16,7 +16,7 @@ import torch.cuda
 from utils.gui_utils import imgui_utils
 from pythonosc.osc_server import BlockingOSCUDPServer
 from pythonosc.udp_client import SimpleUDPClient
-import NDIlib as ndi
+# import NDIlib as ndi
 
 # ----------------------------------------------------------------------------
 class PerformanceWidget:
@@ -90,8 +90,8 @@ class PerformanceWidget:
 
                 imgui.same_line()
                 # NDI parameters
-                changed_ndi, self.viz.ndi_name = imgui.input_text(f"NDI Name", self.viz.ndi_name,
-                                                                  256, imgui.INPUT_TEXT_CHARS_NO_BLANK | imgui.INPUT_TEXT_ENTER_RETURNS_TRUE)
+                #changed_ndi, self.viz.ndi_name = imgui.input_text(f"NDI Name", self.viz.ndi_name,
+                                                              #    256, imgui.INPUT_TEXT_CHARS_NO_BLANK | imgui.INPUT_TEXT_ENTER_RETURNS_TRUE)
 
             if changed_port or changed_ip:
                 self.viz.server.shutdown()
@@ -103,11 +103,12 @@ class PerformanceWidget:
                 self.viz.server_thread.start()
                 self.viz.osc_client = SimpleUDPClient(self.viz.in_ip, self.viz.in_port)
 
-            if changed_ndi:
-                        send_settings = ndi.SendCreate()
-                        send_settings.ndi_name = self.viz.ndi_name
-                        ndi.send_destroy(self.viz.ndi_send)
-                        self.viz.ndi_send = ndi.send_create(send_settings)
+           # if changed_ndi:
+            #            send_settings = ndi.SendCreate()
+             #           send_settings.ndi_name = self.viz.ndi_name
+              #          ndi.send_destroy(self.viz.ndi_send)
+               #         self.viz
+		#	.ndi_send = ndi.send_create(send_settings)
 
             if imgui.checkbox("CPU", self.device=="cpu")[0]:
                 self.device = "cpu"

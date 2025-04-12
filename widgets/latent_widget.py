@@ -144,7 +144,7 @@ class LatentWidget:
         with imgui_utils.item_width(viz.app.button_w * 2 - viz.app.spacing * 2):
             changed, speed = imgui.slider_float('##speed', self.latent.speed, -5, 5,
                                                 format='Speed %.3f',
-                                                power=3)
+                                                flags=imgui.SLIDER_FLAGS_LOGARITHMIC)
             if changed:
                 self.latent.speed = speed
                 self.update = True

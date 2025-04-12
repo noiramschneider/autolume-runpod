@@ -421,8 +421,7 @@ class LoopingWidget:
                     changed, self.params.looptime = imgui.input_int("Seconds", self.params.looptime)
             else:
                 with imgui_utils.item_width(viz.app.button_w * 2 - viz.app.spacing * 2):
-                    changed, speed = imgui.slider_float('##speed', self.speed, -5, 5, format='Speed %.3f',
-                                                        power=3)
+                    changed, speed = imgui.slider_float('##speed', self.speed, -5, 5, format='Speed %.3f',flags=imgui.SLIDER_FLAGS_LOGARITHMIC)
                     if changed:
                         self.speed = speed
 

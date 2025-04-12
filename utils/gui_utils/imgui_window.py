@@ -84,6 +84,7 @@ class ImguiWindow(glfw_window.GlfwWindow):
 
     def end_frame(self):
         imgui.pop_font()
+    #    print("Taille de la pile ImGui avant render:", imgui.get_current_window_stack_size())
         imgui.render()
         imgui.end_frame()
         self._imgui_renderer.render(imgui.get_draw_data())

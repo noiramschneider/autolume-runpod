@@ -129,7 +129,11 @@ class Autolume(imgui_window.ImguiWindow):
             if self.menu is None:
                 self.state = States.ERROR
             else:
-                self.menu()
+                imgui.begin("##main_menu")
+                try:
+                    self.menu()
+                finally:
+                    imgui.end()
 
         if self.state == States.RENDER:
             if self.viz is None or self.render_loop is None:
@@ -142,4 +146,3 @@ class Autolume(imgui_window.ImguiWindow):
 
         self._adjust_font_size()
         self.end_frame()
-

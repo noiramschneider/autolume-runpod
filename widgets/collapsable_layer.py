@@ -271,7 +271,7 @@ class LayerWidget:
                                 self.cur_layer = layer.name
                                 self.cur_channels = layer.shape[1]
                                 if self.refocus:
-                                    imgui.set_scroll_here()
+                                    imgui.set_scroll_here_y()
                                     viz.app.skip_frame()  # Focus will change on next frame.
                                     self.refocus = False
                             draw_list.channels_merge()
@@ -325,7 +325,7 @@ class LayerWidget:
                             self.cur_layer = layer.name
                             self.cur_channels = layer.shape[1]
                             if self.refocus:
-                                imgui.set_scroll_here()
+                                imgui.set_scroll_here_y()
                                 viz.app.skip_frame()  # Focus will change on next frame.
                                 self.refocus = False
                         draw_list.channels_merge()
@@ -383,7 +383,7 @@ class LayerWidget:
                             self.cur_layer = layer.name
                             self.cur_channels = layer.shape[1]
                             if self.refocus:
-                                imgui.set_scroll_here()
+                                imgui.set_scroll_here_y()
                                 viz.app.skip_frame()  # Focus will change on next frame.
                                 self.refocus = False
                         draw_list.channels_merge()
@@ -442,7 +442,7 @@ class LayerWidget:
                             self.cur_layer = layer.name
                             self.cur_channels = layer.shape[1]
                             if self.refocus:
-                                imgui.set_scroll_here()
+                                imgui.set_scroll_here_y()
                                 viz.app.skip_frame()  # Focus will change on next frame.
                                 self.refocus = False
                         draw_list.channels_merge()
@@ -776,7 +776,7 @@ class LayerWidget:
                 _changed, self.noises[self.cur_layer]["strength"] = imgui.slider_float(
                     f"##{self.noises[self.cur_layer]['id']}",
                     self.noises[self.cur_layer]['strength'], -5, 5,
-                    format='Strength %.3f', power=3)
+                    format='Strength %.3f',flags=imgui.SLIDER_FLAGS_LOGARITHMIC)
             imgui.same_line()
             if imgui_utils.button(f"Reset##{self.noises[self.cur_layer]['id']}", width=self.viz.app.button_w,
                                   enabled=self.noises[self.cur_layer]['strength'] != 0):

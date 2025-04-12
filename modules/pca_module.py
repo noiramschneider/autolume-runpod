@@ -105,7 +105,7 @@ class PCA_Module:
             _, self.alpha = imgui.slider_float(
                 "Sparsity", self.alpha,
                 min_value=0.0, max_value=1.0,
-                format='%.3f', power=3)
+                format='%.3f', flags=imgui.SLIDER_FLAGS_LOGARITHMIC)
 
         changed, self.save_path = imgui_utils.input_text('##save_path', self.save_path, 1024,
                                                         flags=(imgui.INPUT_TEXT_AUTO_SELECT_ALL |
